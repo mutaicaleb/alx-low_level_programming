@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <unistd.h>
 /*
- * This program demonstrates how to print text to the standard error using the write function.
+ *main- printsa line of code to a new line to an error
  *
  * Usage: ./program
- *
- * Returns: 1 on success, 0 on failure.
+ * * Returns: 1 on success, 0 on failure.
  */
 int main(void)
 {
