@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <unistd.h>
-/*
- *main - prints a line of code to a new line to an error
+ /**
+ * main - Entry point for the program
  *
- * Usage: ./program
- * * Returns: 1 on success, 0 on failure.
+ * Description: This function is the entry point for the program. It prints the
+ *              message "and that piece of art is useful" - Dora Korpar,
+ *              2015-10-19 to the standard error using the write function.
+ *
+ * Return: Always 1
  */
 int main(void)
 {
