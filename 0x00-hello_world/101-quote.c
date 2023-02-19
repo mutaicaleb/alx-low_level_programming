@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /*
- *main- printsa line of code to a new line to an error
+ *main - prints a line of code to a new line to an error
  *
  * Usage: ./program
  * * Returns: 1 on success, 0 on failure.
