@@ -2,7 +2,7 @@
 /**
  * main- Entry point of the program
  *
- * Returrn:0 indicates that the program executes successfully
+ * Returrn:0 indicates successful execution of the program
  *
  */
 int main(void)
