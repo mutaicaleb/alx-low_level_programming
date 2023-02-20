@@ -4,7 +4,7 @@
  *
  * Return: 0 to indicate successful execution of the program
  */
-int main(void) 
+int main(void)
 {
 	char c;
 
@@ -12,7 +12,7 @@ int main(void)
 {
 	putchar(c);
 }
-	for (c = 'A'; c <= 'Z'; c++) 
+	for (c = 'A'; c <= 'Z'; c++)
 {
 	putchar(c);
 }
