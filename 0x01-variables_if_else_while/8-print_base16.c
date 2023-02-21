@@ -11,11 +11,11 @@ int main()
 	{
 		if (i < 10)
 		{
-		putchar(i + 48); // print digits 0-9
+		putchar(i + 48);
 		}
 		else
 		{
-			putchar(i + 87); // print letters a-f
+			putchar(i + 87);
 		}
 	}
 	putchar('\n');
