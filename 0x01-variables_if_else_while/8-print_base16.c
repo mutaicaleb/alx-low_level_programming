@@ -4,7 +4,7 @@
  *
  * Return:0 to indicate successful execution of the program
  */
-int main()
+int main(void)
 {
 	int i;
 	for (i = 0; i < 16; i++)
@@ -19,5 +19,5 @@ int main()
 		}
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
