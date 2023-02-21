@@ -1,17 +1,23 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - Entry point of the program
- * Return:0 indicates succesfull execution of program
+ * main - entry point
+ * Description: prints numbers
+ * Return: always 0 (success)
  */
 int main(void)
 {
 	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		putchar(i + 48);
-		putchar(',');
-		putchar(' ');
+		putchar(i);
+
+		if (i != '9' || i > '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
