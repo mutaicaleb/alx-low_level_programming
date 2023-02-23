@@ -1,11 +1,13 @@
 #include "main.h"
 /**
- * mul is function that multiplies numbers
- * Describe:This function multiplies two numbers
- * Return: 0 indicatws that the function had ended
+ * mul - function definition
+ * Description: multiply 2 numbers
+ * @a: number 1
+ * @b: number 2
+ * Return: the product
  */
-
 int mul(int a, int b)
 {
-	return (a*b);
+	/*Description: multiply 2 numbers*/
+	return (a * b);
 }
