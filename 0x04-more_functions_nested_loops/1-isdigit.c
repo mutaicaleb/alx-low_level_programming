@@ -17,7 +17,7 @@ int _isdigit(int c)
  */
 	for (c = 0; c <= 9; c++)
 	{
-		if ((c == 'a') && (c != '1')
+		if ((c == 'a') && (c != '1'))
 		{
 			return (1);
 		}
