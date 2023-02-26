@@ -9,13 +9,6 @@
 
 void print_square(int size);
 
-/**
- * print_square - function definition
- * Description: print a square of hash
- * @size: the square size
- * Return: void
- */
-
 void print_square(int size)
 {
 	int row;
