@@ -3,7 +3,7 @@
 /**
  * print_square - function definition
  *Description : print_square prints a square
- *@square is what we are printing
+ *@size : what we are printing
  *
  *
  */
