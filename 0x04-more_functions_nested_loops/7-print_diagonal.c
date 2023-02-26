@@ -1,24 +1,40 @@
 #include "main.h"
 
 /**
- *print_diagonal - prints a diagonalline
- *@n is the number of times we will print
- *Return:void
+ * print_diagonal - function declaration
+ * Description: print a diagonal line
+ * @n: number of parts
+ * Return: void
  */
+
 void print_diagonal(int n);
+
+/**
+ * print_diagonal - function definition
+ * Description: print a slash n times
+ * @n: number of slashes
+ * Return: void
+ */
 
 void print_diagonal(int n)
 {
-	int i;
+	int j;
+	int k;
 
-	while (n <= 0)
+	if (n <= 0)
 	{
-		while (i < n)
+		_putchar('\n');
+	}
+	else
+	{
+		for (j = 0; j < n; j++)
 		{
+			for (k = 0; k < j; k++)
+			{
+				_putchar(' ');
+			}
 			_putchar('\\');
-			i--;
+			_putchar('\n');
 		}
-		_putchar("\n");
-		n++;
 	}
 }
