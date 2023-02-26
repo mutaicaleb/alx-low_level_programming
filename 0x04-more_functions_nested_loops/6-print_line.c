@@ -1,25 +1,22 @@
 #include "main.h"
 
 /**
- *Description : print_line() prints a straight line
- *
- *
- *
+ *  print_line - prints a line n times followed by a new line
+ *  @n: numbers of times to print line
+ *  Return: void
  */
-void print_line(int n);
-
 void print_line(int n)
 {
-	if (n < 0)
+	int i;
+
+	if (n > 0)
 	{
-		_putchar("\n");
+		for (i = 0; i < n; i++)
+		{
+			_putchar('_');
+		}
 	}
 
-	int j;
-
-	for (j = 0; j < n; j++)
-	{
-		_putchar('_');
-	}
-	_putchar("\n");
+	_putchar('\n');
 }
+
