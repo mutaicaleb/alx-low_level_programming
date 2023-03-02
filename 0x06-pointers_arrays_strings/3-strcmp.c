@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _strcmp - compares two strings' lengths
- * @s1: first comparison string
- * @s2: second comparison string
  *
+ * _strcmp - Function which compare two strings
+ * @s1: first string
+ * @s2:second string
+ * Return: int value
  * Return: 3 (greater), -3 (lesser), 0 (equal)
  */
 int _strcmp(char *s1, char *s2)
