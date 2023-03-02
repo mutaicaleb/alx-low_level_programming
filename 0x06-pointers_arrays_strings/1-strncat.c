@@ -23,3 +23,4 @@ char *_strncat(char *dest, char *src, int n)
 		n--;
 	}
 	return (dest);
+}
