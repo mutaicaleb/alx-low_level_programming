@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strcmp - compares two strings' lengths
  * @s1: first comparison string
@@ -6,27 +7,27 @@
  *
  * Return: 3 (greater), -3 (lesser), 0 (equal)
  */
-
-int _strcmp(char *s1, char *s2);
-
 int _strcmp(char *s1, char *s2)
 {
-  int i,j;
+	int i, j, k;
 
-  for (; s1 != '\0'; && s2 != '\0'; s1++; s2++;)
-  {
-    if (s1 == s2)
-    {
-      j = 0;
-    }
-    else if (s1 < s2)
-    {
-      j = -1
-    }
-    else
-    {
-      j = +1;
-    }
-  }
-  return (j);
+	i = 0;
+	while (*s1 != '\0')
+	{
+		s1++;
+		i++;
+	}
+	j = 0;
+	while (*s2 != '\0')
+	{
+		s2++;
+		j++;
+	}
+	if (i > j)
+		k = 3;
+	else if (i < j)
+		k = -3;
+	else
+		k = 0;
+	return (k);
 }
