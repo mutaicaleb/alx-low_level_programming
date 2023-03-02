@@ -11,22 +11,21 @@
  * Return: returns
  */
 
-char *_strncpy(char *dest, char *src, int n);
-
 char *_strncpy(char *dest, char *src, int n)
 {
-  int i;
-  if (*src != '\0')
-  {
-    i = 0;
+	char *d = dest;
+	int i;
 
-    while (i < n)
-    {
-      *dest = *src;
-      dest++;
-      src++;
-      *dest = '\0';
-    }
-  }
-  return (dest);
+	if (*src != '\0')
+	{
+		i = 0;
+		while (i < n)
+		{
+			*dest = *src;
+			src++;
+			dest++;
+			i++;
+		}
+	}
+	return (d);
 }
