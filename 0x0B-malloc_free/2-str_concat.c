@@ -20,9 +20,9 @@ char *str_concat(char *s1, char *s2);
 
 char *str_concat(char *s1, char *s2)
 {
-	char *fstring;
-	int i;
-	int j;
+	char *new_string;
+	int index;
+	int concat_index = 0;
 	int len = 0;
 
 	if (s1 == NULL)
@@ -31,19 +31,19 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i] || s2[i]; i++)
+	for (index = 0; s1[index] || s2[index]; index++)
 		len++;
 
-	fstring  = malloc(sizeof(char) * len);
+	new_string  = malloc(sizeof(char) * len);
 
-	if (fstring == NULL)
+	if (new_string == NULL)
 		return (NULL);
 
-	for (i = 0; s1[i]; i++)
-		fstring[j++] = s1[i];
+	for (index = 0; s1[index]; index++)
+		new_string[concat_index++] = s1[index];
 
-	for (i = 0; s2[i]; i++)
-		fstring[j++] = s2[i];
+	for (index = 0; s2[index]; index++)
+		new_string[concat_index++] = s2[index];
 
-	return (fstring);
+	return (new_string);
 }
