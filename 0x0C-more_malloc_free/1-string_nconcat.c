@@ -1,49 +1,59 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * string_nconcat - is a function that concatenates two strings
- * @s1:string to be used
- * @s2:string to be used
- * @n:nubers to be passed in
+ * string_nconcat - function declaration
+ * @s1: string 1
+ * @s2: string 2
+ * @n: number of bytes
  * Return: return a string or null
+ */
+
+char *string_nconcat(char *s1, char *s2, unsigned int n);
+
+/**
+ * string_nconcat - function definition
+ * @s1: the first string
+ * @s2: the second string
+ * @n: the number of bytes for s2
+ * Description: point to a newly allocated memory in space
+ * which contains s1
+ * Return: a string or NULL
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *fstring;
-	int count1, count2;
+	unsigned int index, len1, len2;
+	char *string;
 
-	count1 = 0;
-	count2 = 0;
-
+	if (s2 == NULL)
+		s2 = "";
 	if (s1 == NULL)
 		s1 = "";
 
-	if (s1 == NULL)
-		s2 = "";
+	len1 = 0;
+	len2 = 0;
+	while (s2[len2] != '\0')
+		len2++;
+	while (s1[len1] != '\0')
+		len1++;
 
-	while (s1[count1] != '\0')
-		count1++;
-	while (s2[count2] != '\0')
-		count2++;
-	if (s2 >= n)
-		n = s2;
+	if (n >= len2)
+		n = len2;
 
-	fstring = (int *)malloc(sizeof(char) * n + count1 + 1);
-
-	if (fstring == NULL)
+	string = malloc(sizeof(char) * n + len1 + 1);
+	if (string == NULL)
 		return (NULL);
 
-	int i;
+	for (index = 0; index < len1; index++)
+		string[index] = s1[index];
 
-	for (i = 0; i < count1; i++)
-		fstring[i] = s1[i];
+	for (index = 0; index < n; index++)
+		string[index + len1] = s2[index];
 
-	for (i = 0; i < n; i++)
-		fstring[i + count1] = s2[i];
-	fstring[i + count1] = '\0';
+	string[index + len1] = '\0';
 
-	return (fstring);
+	return (string);
 }
+
