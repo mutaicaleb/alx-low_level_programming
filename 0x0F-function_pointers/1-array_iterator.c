@@ -1,14 +1,19 @@
 #include <stdio.h>
-#include "function_pointer.h"
+#include "function_pointers.h"
 /**
- *array_iterator - prints out an interger
- *@size : is the size of the array
- *@action : is the function pointer to be called
+ * array_iterator - iterates through array
+ * @array: array to go through
+ * @size: size of array
+ * @action: action function to take
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+	int index;
 
-	for (i=0; i<size; i++)
-		action(array);
+	if (array == NULL || action == NULL)
+		exit(98);
+	for (index = 0; index < size; index++)
+	{
+		action(array[index]);
+	}
 }
